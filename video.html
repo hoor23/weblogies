@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery (required by FancyBox) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Include FancyBox CSS file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+<!-- Include FancyBox JS file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</head>
+<body>
+    <div class="row portfolio-tab-container">
+        <div class="porfolio-items-container border-box-effect">
+            <a class="ss-portfolio__item" data-fancybox="portfolio" data-type="iframe" href="asset/rights.mp4">
+                <figure class="ss-portfolio__item--image">
+                    <img loading="lazy" class="lazy img-fluid loaded" src="asset/header-bg.svg" alt="Fracht App" data-was-processed="true">
+                </figure>
+            </a>
+        </div>
+        <!-- Add similar entries for other videos -->
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $("[data-fancybox='portfolio']").fancybox({
+                type: "iframe", // Set the type to "iframe" for videos
+                iframe: {
+                    preload: false, // Set to true if you want to preload the iframe
+                },
+                width: 10000, // Set the width of the iframe
+                height: 3000, // Set the height of the iframe
+                maxWidth: "90%", // Set the maximum width of the iframe
+                maxHeight: "90%", // Set the maximum height of the iframe
+                // autoSize: false, // Set to false to disable auto-sizing
+                helpers: {
+                    buttons: {
+                        position: "top", // Set the position of buttons (you can change to "inside" or "outside")
+                    },
+                },
+            });
+        });
+    </script>
+
+
+    
+</body>
+</html>
